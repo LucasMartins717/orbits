@@ -15,7 +15,7 @@ const BolinhaComGravidade = () => {
     const screenHeight = window.innerHeight;
 
 
-    //CRIAR POSIÇÃO INICIAL DAS BOLINHAS
+    //Criar posição inicial das bolinhas
     const createBallCoordinates = (numBalls, ballSize, screenWidth, screenHeight) => {
         const balls = [];
         const gridSize = Math.ceil(Math.sqrt(numBalls));
@@ -38,7 +38,7 @@ const BolinhaComGravidade = () => {
     const [balls, setBalls] = useState(createBallCoordinates(numBalls, ballSize, screenWidth, screenHeight));
 
     
-    //ATUALIZAR POSIÇÃO DAS BOLINHAS
+    //Atualizar posição das bolinhas
     useEffect(() => {
         const updatePositions = () => {
             setBalls(prevBalls => {
@@ -115,7 +115,7 @@ const BolinhaComGravidade = () => {
         return () => clearInterval(interval);
     }, [screenWidth, screenHeight])
 
-    //ATUALIZAR POSIÇÃO DO MOUSE E INTERAÇÃO COM AS BOLINHAS
+    //Atualizar posição do mouse e interação com as bolinhas
     useEffect(() => {
         const handleMouseMove = (e) => {
             const mouseX = e.clientX;
@@ -156,7 +156,6 @@ const BolinhaComGravidade = () => {
         };
     }, [])
 
-    //
     return (
         <div>
             {balls.map((ball, index) => (

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createContext } from "react";
 
 export const Contexto = createContext();
-Contexto.displayName = "Contexto"
+Contexto.displayName = "BallsContext"
 
 export const ContextoProvider = ({ children }) => {
 
@@ -13,10 +13,10 @@ export const ContextoProvider = ({ children }) => {
     const [friction, setFriction] = useState(0.8);
     const [slowdownFactor, setSlowdownFactor] = useState(0.96);
 
-    const [gravityActive, setGravityActive] = useState(false); //
-    const [slowdownActive, setSlowdownActive] = useState(true); //
-    const [collisionActive, setCollisionActive] = useState(false) //X
-    const [sideMenuActive, setSideMenuActive] = useState(false); //X
+    const [gravityActive, setGravityActive] = useState(false);
+    const [slowdownActive, setSlowdownActive] = useState(true);
+    const [collisionActive, setCollisionActive] = useState(false);
+    const [sideMenuActive, setSideMenuActive] = useState(false);
 
     return (
         <Contexto.Provider value={{

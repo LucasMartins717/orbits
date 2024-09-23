@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import MenuLateral from "../../component/MenuLateral";
 
 const DivEstilo = styled.div`
     display: flex;
@@ -22,7 +21,6 @@ const NaoEncontrado = () => {
         <DivEstilo>
             <h1 className="titulo">;-;</h1>
             <h2 className="titulo apontar">☝️</h2>
-            <MenuLateral />
         </DivEstilo>
     );
 };

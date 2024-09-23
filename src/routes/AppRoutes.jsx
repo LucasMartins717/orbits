@@ -3,6 +3,7 @@ import ComGravidade from "../pages/ComGravidade";
 import SemGravidade from "../pages/SemGravidade";
 import NaoEncontrado from "../pages/NaoEncontrado";
 import { ContextoProvider } from "../context/Contexto";
+import MenuLateral from "../component/MenuLateral";
 const AppRoutes = () => {
     return (
         <BrowserRouter>
@@ -13,6 +14,7 @@ const AppRoutes = () => {
                     <Route path="/sem-gravidade" element={<SemGravidade />} />
                     <Route path="*" element={<NaoEncontrado />} />
                 </Routes>
+                <MenuLateral />
             </ContextoProvider>
         </BrowserRouter>
     );
