@@ -8,6 +8,8 @@ const DivContainer = styled.div`
     position: fixed;
     top: 0;
     right: ${({ $sideMenuActive }) => ($sideMenuActive ? '0px' : '-323px')};
+    background: none;
+    
     h1{
         margin-right: 0.2em;
         user-select: none;
@@ -31,6 +33,7 @@ const DivEstilo = styled.div`
     ul{
         list-style-type: none;
         padding: 1em;
+        border-bottom-left-radius: 0.2em;
     }
 
     .link{
